@@ -33,53 +33,63 @@ const doctypes = {
 		name: 'html'
 	},
 	'html4': {
+		doctype: 'DOCTYPE',
 		name: 'HTML',
-		publicId: '-//W3C//DTD HTML 4.01//EN',
-		systemId: 'http://www.w3.org/TR/html4/strict.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD HTML 4.01//EN"',
+		systemId: '"http://www.w3.org/TR/html4/strict.dtd"'
 	},
 	'html4.01strict': {
+		doctype: 'DOCTYPE',
 		name: 'HTML',
-		publicId: '-//W3C//DTD HTML 4.01//EN',
-		systemId: 'http://www.w3.org/TR/html4/strict.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD HTML 4.01//EN"',
+		systemId: '"http://www.w3.org/TR/html4/strict.dtd"'
 	},
 	'html4.01transitional': {
+		doctype: 'DOCTYPE',
 		name: 'HTML',
-		publicId: '-//W3C//DTD HTML 4.01 Transitional//EN',
-		systemId: 'http://www.w3.org/TR/html4/loose.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"',
+		systemId: '"http://www.w3.org/TR/html4/loose.dtd"'
 	},
 	'html4.01frameset': {
+		doctype: 'DOCTYPE',
 		name: 'HTML',
-		publicId: '-//W3C//DTD HTML 4.01 Frameset//EN',
-		systemId: 'http://www.w3.org/TR/html4/frameset.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"',
+		systemId: '"http://www.w3.org/TR/html4/frameset.dtd"'
 	},
 	'xhtml': {
+		doctype: 'DOCTYPE',
 		name: 'html',
-		publicId: '-//W3C//DTD XHTML 1.1//EN',
-		systemId: 'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD XHTML 1.1//EN"',
+		systemId: '"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"'
 	},
 	'xhtml1.1': {
+		doctype: 'DOCTYPE',
 		name: 'html',
-		publicId: '-//W3C//DTD XHTML 1.1//EN',
-		systemId: 'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD XHTML 1.1//EN"',
+		systemId: '"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"'
 	},
 	'xhtml1': {
+		doctype: 'DOCTYPE',
 		name: 'html',
-		publicId: '-//W3C//DTD XHTML 1.0 Strict//EN',
-		systemId: 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"',
+		systemId: '"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"'
 	},
 	'xhtml1.0strict': {
+		doctype: 'DOCTYPE',
 		name: 'html',
-		publicId: '-//W3C//DTD XHTML 1.0 Strict//EN',
-		systemId: 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"',
+		systemId: '"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"'
 	},
 	'xhtml1.0transitional': {
+		doctype: 'DOCTYPE',
 		name: 'html',
-		publicId: '-//W3C//DTD XHTML 1.0 Transitional//EN',
-		systemId: 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"',
+		systemId: '"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"'
 	},
 	'xhtml1.0frameset': {
+		doctype: 'DOCTYPE',
 		name: 'html',
-		publicId: '-//W3C//DTD XHTML 1.0 Frameset//EN',
-		systemId: 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd'
+		publicId: 'PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"',
+		systemId: '"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"'
 	}
 };
