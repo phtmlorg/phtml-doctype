@@ -3,25 +3,31 @@ import phtml from 'phtml';
 export default new phtml.Plugin('phtml-doctype', opts => {
 	const doctype = doctypes[formatDoctype(Object(opts).doctype)] || doctypes[formatDoctype(Object(opts).replace)] || doctypes['html5'];
 	const isReplacingDoctype = 'replace' in Object(opts) ? Boolean(opts.replace) : true;
+	const safe = 'safe' in Object(opts) ? Boolean(opts.safe) : false;
 
 	return root => {
 		const firstNode = root.first;
 		const hasDoctype = firstNode && firstNode.type === 'doctype';
 		const newDoctypeNode = isReplacingDoctype || !hasDoctype ? new phtml.Doctype(doctype) : null;
+		const hasSafeTag = !safe || root.nodes.some(node => safeTagRegExp.test(node.name));
 
-		if (firstNode) {
-			if (hasDoctype) {
-				if (isReplacingDoctype) {
-					firstNode.replaceWith(newDoctypeNode);
+		if (hasSafeTag) {
+			if (firstNode) {
+				if (hasDoctype) {
+					if (isReplacingDoctype) {
+						firstNode.replaceWith(newDoctypeNode);
+					}
+				} else {
+					firstNode.before(newDoctypeNode);
 				}
 			} else {
-				firstNode.before(newDoctypeNode);
+				root.append(newDoctypeNode);
 			}
-		} else {
-			root.append(newDoctypeNode);
 		}
 	};
 });
+
+const safeTagRegExp = /^(body|head|html)$/;
 
 const formatDoctype = doctype => String(doctype || '').trim().toLowerCase().replace(/\s/g, '')
 

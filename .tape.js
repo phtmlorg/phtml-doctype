@@ -22,5 +22,21 @@ module.exports = {
 		options: {
 			replace: 'xhtml'
 		}
+	},
+	'safe:basic': {
+		message: 'supports { safe: true } usage',
+		options: {
+			safe: true
+		},
+		source: 'basic.html',
+		expect: 'basic.expect.html'
+	},
+	'safe:empty': {
+		message: 'supports { safe: true } usage',
+		options: {
+			safe: true
+		},
+		source: 'empty.html',
+		expect: 'empty.html'
 	}
 };

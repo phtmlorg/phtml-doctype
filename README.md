@@ -118,6 +118,37 @@ phtmlDoctype({ replace: true });
 Optionally, the `replace` option can be given a string, which will work as a
 fallback to the [doctype](#doctype) option.
 
+### safe
+
+The `safe` option determines whether the doctype should only be included when a
+top level `html`, `head`, or `body` tag is present. By default, this setting is
+`false` and the doctype is added regardless.
+
+```js
+phtmlDoctype({ safe: true });
+```
+
+```html
+<custom-element></custom-element>
+
+<!-- becomes -->
+
+<custom-element></custom-element>
+```
+
+```html
+<html>
+  <custom-element></custom-element>
+</html>
+
+<!-- becomes -->
+
+<!doctype html>
+<html>
+  <custom-element></custom-element>
+</html>
+```
+
 [cli-img]: https://img.shields.io/travis/phtmlorg/phtml-doctype.svg
 [cli-url]: https://travis-ci.org/phtmlorg/phtml-doctype
 [git-img]: https://img.shields.io/badge/support-chat-blue.svg
